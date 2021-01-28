@@ -6,11 +6,14 @@ import { validate } from "./helpers/validate";
 import { showInputError, removeInputError } from "./views/form";
 import { login } from "./services/auth.service";
 import { notify } from "./views/notifications";
+import { getNews } from "./services/news.service";
 
 const { form, inputEmail, inputPassword } = UI;
 const inputs = [inputEmail, inputPassword];
 
-// Events
+//links navigation
+
+// Events login
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   onSubmit();
@@ -19,7 +22,7 @@ inputs.forEach((el) =>
   el.addEventListener("focus", () => removeInputError(el))
 );
 
-// Handlers
+// Handlers login
 async function onSubmit() {
   const isValidForm = inputs.every((el) => {
     const isValidInput = validate(el);
@@ -33,6 +36,7 @@ async function onSubmit() {
 
   try {
     await login(inputEmail.value, inputPassword.value);
+    await getNews();
     form.reset();
     notify({ msg: "Login success", className: "alert-success" });
   } catch (err) {

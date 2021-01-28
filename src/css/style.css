@@ -1,40 +1,69 @@
 .login-page-wrapp {
   height: 100vh;
+  flex-direction: column;
 }
-
-.login-form-wrap {
+.links_wrapper {
+  margin-top: 180px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  justify-content: flex-end;
+}
+.links_wrapper .login_link:last-of-type {
+  margin-left: 15px;
+}
+.links_wrapper .login_link {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.links_wrapper .login_link:hover {
+  text-decoration: underline;
+}
+.links_wrapper .login_link.link_active {
+  color: rgb(4, 123, 252);
+  opacity: 1;
+}
+.forms-wrapper {
   width: 50%;
 }
-
+.signup-form-wrap .form-card {
+  display: none;
+}
+.signup-form-wrap .form-card,
 .login-form-wrap .form-card {
   max-width: 500px;
   width: 100%;
   margin-right: 30px;
 }
-
+.signup-form-wrap .form-card .card-title,
 .login-form-wrap .form-card .card-title {
   color: var(--gray);
 }
-
 .login-greeting-screen {
   background: var(--teal);
   width: 50%;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
-
 .login-greeting-screen .login-greeting-screen-text {
   max-width: 500px;
 }
-
 .login-greeting-screen .login-greeting-screen-text {
   color: var(--white);
 }
-
 .login-greeting-screen .login-greeting-screen-title {
   margin-bottom: 30px;
   text-transform: capitalize;
 }
-
 .login-greeting-screen .login-greeting-screen-description {
   line-height: 1.4;
+}
+.gender_orientation {
+  display: flex;
+  justify-content: space-around;
+}
+.form-group.date .form-control {
+  width: 25%;
 }

@@ -8,35 +8,182 @@
   </head>
   <body>
     <div class="login-page-wrapp d-flex">
-      <div class="login-form-wrap d-flex align-items-center">
-        <div class="form-card card ml-auto">
-          <div class="card-body">
-            <h4 class="card-title">Please Login</h4>
-            <form name="loginForm">
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  data-required="email"
-                  data-invalid-message="Please provide valid email example@example.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                  data-required="password"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+      <div class="forms-wrapper">
+        <div class="links_wrapper d-flex align-items-center">
+          <div class="login_link link link_active">Login</div>
+          <div class="login_link link">Sigh up</div>
+        </div>
+        <div class="login-form-wrap d-flex align-items-center">
+          <div class="form-card card ml-auto">
+            <div class="card-body">
+              <h4 class="card-title">Login</h4>
+              <form name="loginForm">
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="login_email"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                    data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="login_password"
+                    placeholder="Password"
+                    data-required="password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="signup-form-wrap d-flex align-items-center">
+          <div class="form-card card ml-auto">
+            <div class="card-body">
+              <h4 class="card-title">Sign up</h4>
+              <form name="signupForm">
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                    data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                    data-required="password"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="nickname">Nickname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nickname"
+                    placeholder="Nickname"
+                    data-required="nickname"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="first_name">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="first_name"
+                    placeholder="First name"
+                    data-required="first_name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="last_name">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last_name"
+                    placeholder="Last name"
+                    data-required="last_name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="phone"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Phone"
+                    data-required="phone"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="gender_orientation">Gender</label>
+                  <div class="gender_orientation">
+                    <span>
+                      <input
+                        type="radio"
+                        data-required="gender_orientation"
+                        name="sex"
+                        value="male"
+                      />
+                      <span> Male</span>
+                    </span>
+                    <span>
+                      <input
+                        type="radio"
+                        data-required="gender_orientation"
+                        name="sex"
+                        value="female"
+                      />
+                      <span>Female</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    placeholder="City"
+                    data-required="city"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="country">Country</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    placeholder="Country"
+                    data-required="country"
+                  />
+                </div>
+                <div class="form-group date">
+                  <label for="date">Date of birthday</label>
+                    <div class="row">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="day"
+                        placeholder="day"
+                        data-required="day"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="month"
+                        placeholder="month"
+                        data-required="month"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="year"
+                        placeholder="year"
+                        data-required="year"
+                      />
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
